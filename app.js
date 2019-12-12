@@ -29,6 +29,7 @@ app.get('/', (req, res) => {
         stripePublishableKey: keys.stripePublishablekey
     });
 });
+console.log('test clee', keys.stripePublishablekey);
 // route success
 //app.get('/success', (req, res) => {
 //    res.render('success');
