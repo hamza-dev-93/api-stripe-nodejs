@@ -1,0 +1,34 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                developpement web app stripe Ebook
+            </h1>
+            <p class="lead">
+                Apprendre le developpement web (front et back end).
+            </p>
+            <form action="/charge" method="post" id="payment-form">
+                <script src="https://checkout.stripe.com/checkout.js" 
+                    class="stripe-button"
+                    data-key="pk_test_eK9kLblX1FpIwSFDZzLhnRZl" 
+                    data-amount="2550" 
+                    data-name="Developpement web"
+                    data-description="Developpement web avec node js et stripe" 
+                    data-image="/img/marketplace.png"
+                    data-locale="auto">
+                    </script>
+                    <script>
+                        // hide stripe button
+                        document.getElementsByClassName('stripe-button-el')[0].style.display ='none';
+                    </script>
+                    <button type="submit" class="btn btn-outline-dark btn-dark text-white btn-lg">
+                        Acheter le produit a 25.50 €
+                    </button>
+            </form>
+<div id="card-errors" role="alert"></div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="/img/e.jpg" alt="">
+        </div>
+    </div>
+</section>
