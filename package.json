@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm install node app.js"
+    "start": "npm install && node app.js"
   },
   "author": "hamza bedoui",
   "license": "ISC",
