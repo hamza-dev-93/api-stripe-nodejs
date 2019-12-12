@@ -5,7 +5,7 @@ const stripe = require('stripe')(keys.STRIPE_SECRET_KEY);
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const twig = require('twig');
-
+console.log(keys.STRIPE_SECRET_KEY);
 const app = express();
 
 //Handelbars Middelware
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
         stripePublishableKey: keys.STRIPE_SECRET_KEY
     });
 });
-console.log('test clee', keys.STRIPE_SECRET_KEY);
+
 // route success
 //app.get('/success', (req, res) => {
 //    res.render('success');
