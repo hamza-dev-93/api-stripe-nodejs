@@ -10,7 +10,7 @@
             <form action="/charge" method="post" id="payment-form">
                 <script src="https://checkout.stripe.com/checkout.js" 
                     class="stripe-button"
-                    data-key="pk_test_eK9kLblX1FpIwSFDZzLhnRZl" 
+                    data-key="{{ stripePublishableKey }} " 
                     data-amount="2550" 
                     data-name="Developpement web"
                     data-description="Developpement web avec node js et stripe" 

@@ -1,5 +1,7 @@
 const express = require('express');
-const stripe = require('stripe')('sk_test_ioTZDyEGLN1Fu67Gcpum5DeJ');
+// obtenir les different key  api stripe
+const keys = require('./config/keys');
+const stripe = require('stripe')(keys.stripeSecretKey);
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const twig = require('twig');
@@ -23,7 +25,9 @@ app.use(express.static(`${__dirname}/public`));
 
 // Index Route
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {
+        stripePublishableKey: keys.stripePublishablekey
+    });
 });
 // route success
 //app.get('/success', (req, res) => {
